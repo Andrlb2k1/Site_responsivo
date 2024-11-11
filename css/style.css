@@ -32,6 +32,11 @@ body {
 	margin: 0 auto;
 }
 
+section,
+footer {
+	padding: 2.7rem 0;
+}
+
 .btn-gradiente {
 	padding: 10px 25px;
 	color: white;
@@ -106,6 +111,42 @@ main .container {
 	z-index: 10;
 }
 
+/* resultados */
+.resultados {
+	background: #fa8607;
+}
+
+.resultados .container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.resultados .resultados-text {
+	color: white;
+	font-size: 1.6rem;
+	font-weight: 600;
+	width: 50%;
+}
+
+.resultados .resultados-numero {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+}
+
+.resultados .resultados-numero p {
+	text-align: center;
+	margin: 0 30px;
+	font-size: 20px;
+}
+
+.resultados .resultados-numero p span {
+	font-size: 30px;
+	font-weight: 600;
+}
+
 /* responsivo */
 @media(max-width: 960px) {
 	.menu-icon {
@@ -142,5 +183,25 @@ main .container {
 	}
 	main .container .main-text div {
 		justify-content: center;
+	}
+	.resultados .container {
+		flex-direction: column;
+	}
+	.resultados-text,
+	.resultados-numero {
+		width: 100%;
+		text-align: center;
+	}
+	.resultados-numero {
+		margin-top: 30px;
+	}
+}
+
+@media(max-width: 440px) {
+	.resultados .resultados-numero {
+		flex-direction: column;
+	}
+	main .container .main-text h1 {
+		font-size: 3rem;
 	}
 }
